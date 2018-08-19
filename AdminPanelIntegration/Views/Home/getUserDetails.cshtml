@@ -1,0 +1,247 @@
+﻿
+@{
+    ViewBag.Title = "UserDetails";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+
+<h2>User Details</h2>
+
+@*<p>
+    <label for="lbl1">User ID :: @ViewBag.result.ud.uid</label>
+<p>
+    <label for="lbl2">Name :: @ViewBag.result.ud.uname </label>
+<p>
+    <label for="lbl3">eMail ID :: @ViewBag.result.ud.mobileno </label>
+<p>
+    <label for="lbl4">Profile Picture :: @ViewBag.result.ud.profilepic </label>
+<p>
+    <label for="lbl5">Last Active :: @ViewBag.result.ut.lastudate</label>
+<p>
+    <label for="lbl6">OS :: @ViewBag.result.ut.os </label>
+<p>
+    <label for="lbl7">OS Version :: @ViewBag.result.ut.osversion </label>
+<p>
+    <label for="lbl8">App Version :: @ViewBag.result.ut.appversion </label>*@
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Details
+    </title>
+    <meta name="author" content="">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <script type="text/javascript" src="../../html5shiv.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <link href="~/Contents/icomoon/style.css" rel="stylesheet" />
+    
+    <!--[if lte IE 7]>
+    <script src="css/icomoon-font/lte-ie7.js">
+    </script>
+    <![endif]-->
+    <link href="~/Contents/css/bootstrap-editable.css" rel="stylesheet" />
+    <link href="~/Contents/css/select2.css" rel="stylesheet" />
+    <link href="~/Contents/css/main.css" rel="stylesheet" />
+    <!-- !important. This is the duplicate file of main.css, You can remove this file. If you want to use this theme, please change the primary-color variable in main.css -->
+</head>
+
+<div class="dashboard-wrapper">
+
+    <div class="widget no-margin">
+        <div class="widget-header">
+            <div class="title">
+                <span class="fs1" aria-hidden="true" data-icon=""></span> User Profile
+            </div>
+        </div>
+        <div class="widget-body">
+            <div class="container-fluid">
+
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="thumbnail">
+                            <img alt="300x200" src="@ViewBag.result.ud.profilepic">
+                            <div class="caption">
+                                @*<p class="no-margin">
+                                        <a href="#" class="btn btn-info" data-original-title="">
+                                            Change Image
+                                        </a>
+                                        <a href="#" class="btn" data-original-title="">
+                                            Cancel
+                                        </a>
+                                    </p>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span9">
+                        <form class="form-horizontal">
+                            <h5>
+                                General Information
+                            </h5>
+                            <hr>
+                            <div class="control-group">
+                                <label class="control-label">
+                                    User Name
+                                </label>
+                                <div class="controls">
+                                    <a href="#" id="userName" data-type="text" data-pk="1" data-original-title="Click here to edit your name" class="inputText editable editable-click">
+                                        @ViewBag.result.ud.uname
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">
+                                    Email ID
+                                </label>
+                                <div class="controls">
+                                    <a href="#" data-type="email" data-pk="1" data-original-title="Click here to edit your email" class="inputText editable editable-click">
+                                        @ViewBag.result.ud.mobileno
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">
+                                    OS
+                                </label>
+                                <div class="controls">
+                                    <a href="#" id="password" data-type="password" data-pk="1" data-original-title="Click here to edit your password" class="inputText editable editable-click">
+                                        @ViewBag.result.ut.os
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">
+                                    OS Version
+                                </label>
+                                <div class="controls">
+                                    <a href="#" id="password" data-type="password" data-pk="1" data-original-title="Click here to edit your password" class="inputText editable editable-click">
+                                        @ViewBag.result.ut.osversion
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">
+                                    App Version
+                                </label>
+                                <div class="controls">
+                                    <a href="#" id="password" data-type="password" data-pk="1" data-original-title="Click here to edit your password" class="inputText editable editable-click">
+                                        @ViewBag.result.ut.appversion
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">
+                                    Token
+                                </label>
+                                <div class="controls">
+                                    <a href="#" id="password" data-type="password" data-pk="1" data-original-title="Click here to edit your password" class="inputText editable editable-click">
+                                        @ViewBag.result.ut.token
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">
+                                    Last Updated On
+                                </label>
+                                <div class="controls">
+                                    <a href="#" id="password" data-type="password" data-pk="1" data-original-title="Click here to edit your password" class="inputText editable editable-click">
+                                        @ViewBag.result.ut.lastudate
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            @*<div class="control-group">
+                                    <label class="control-label">
+                                        Password
+                                    </label>
+                                    <div class="controls">
+                                        <a href="#" id="password" data-type="password" data-pk="1" data-original-title="Click here to edit your password" class="inputText editable editable-click">
+                                            ******
+                                        </a>
+                                    </div>
+                                </div>*@
+
+                            <br>
+                            @*<h5>
+                                    Personal Information
+                                </h5>
+                                <hr>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        First Name
+                                    </label>
+                                    <div class="controls">
+                                        <a href="#" id="firstName" data-type="text" data-pk="1" data-original-title="Click here to edit your first name" class="inputText editable editable-click">
+                                            Srinu
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        Last Name
+                                    </label>
+                                    <div class="controls">
+                                        <a href="#" id="lastName" data-type="text" data-pk="1" data-original-title="Click here to edit your first name" class="inputText editable editable-click">
+                                            Baswa
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        Location
+                                    </label>
+                                    <div class="controls">
+                                        <a href="#" id="location" data-type="text" data-pk="1" data-original-title="Click here to edit your first name" class="inputText editable editable-click">
+                                            Banglore, India.
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        Website URL
+                                    </label>
+                                    <div class="controls">
+                                        <a href="#" id="url" data-type="url" data-pk="1" data-original-title="Click here to edit your first name" class="inputText editable editable-click">
+                                            http:www.abcxyz.com
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        Tags
+                                    </label>
+                                    <div class="controls">
+                                        <a href="#" id="tags" data-type="select2" data-pk="1" data-original-title="Enter tags" class="editable editable-click">
+                                            Html, CSS, Javascript
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        About
+                                    </label>
+                                    <div class="controls">
+                                        <a data-original-title="Write about your self" data-placeholder="Your comments here..." data-pk="1" data-type="textarea" id="aboutMe" href="#" class="inputTextArea editable editable-click" style="margin-bottom: 10px;">
+                                            About me :)
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-actions no-margin">
+                                    <button type="submit" class="btn btn-info">
+                                        Save changes
+                                    </button>
+                                    <button type="button" class="btn">
+                                        Cancel
+                                    </button>
+                                </div>*@
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
